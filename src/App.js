@@ -47,14 +47,17 @@ class App extends React.Component {
     web3.eth.getAccounts().then(console.log);
     return (
       <div>
+        <div className="div-1">
         <h2>
           Lottery Contract
-        </h2>
-        <p>This contract is managed by {this.state.manager}
+        </h2></div><br/><br/><br/><br/><br/><br/><br/>
+        <div className="div-2">
+        <p className="p1">This contract is managed by <b>{this.state.manager}</b>
         <br/>There are currently {this.state.players.length} people entered
         competing to win {web3.utils.fromWei(this.state.balance, 'ether')} ether! 
-        </p>
+        </p></div>
         <hr/>
+
         <form onSubmit = {this.onSubmit}>
           <h4 >Want to try your luck?</h4>
           <div>
@@ -68,8 +71,9 @@ class App extends React.Component {
           <button>Enter</button>
         </form>
         <hr/>
+        <div className="div-4">
         <h4>Ready to pick a winner?</h4>
-        <button onClick={this.onClick}>Pick a winner!</button>
+        <button onClick={this.onClick}>Pick a winner!</button></div>
 
         <h1>{this.state.message}</h1>
       </div>
